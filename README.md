@@ -1,20 +1,25 @@
-Generate heatmap from GASCH2000 dataset
+Generate Heatmap from the Gasch 2000 Dataset
 
-Usage:
+This repository contains code used to generate a heatmap of the top 10 most variable genes across experimental conditions using the Gasch et al. (2000) dataset.
 
-1. (Optional) Create a virtualenv and install requirements:
+Requirements
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+A Conda environment can be created using:
 
-2. Run the script:
+conda env create -f environment.yml
+conda activate bch709_heatmap
 
-```bash
-python3 generate_heatmap.py
-```
+Usage
 
-Output: `heatmap.png` in the repository root.
-# BCH709 Vibe Coding
+Run the analysis using R:
+
+Rscript heatmap_analysis.R
+
+Output
+
+The analysis generates:
+
+- heatmap_top10_genes.png
+- heatmap_top10_genes.pdf
+
+in the repository root directory.
